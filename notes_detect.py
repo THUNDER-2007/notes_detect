@@ -7,8 +7,10 @@ import cv2
 import numpy as np
 from io import BytesIO
 
-# ----------------- Set Tesseract path -----------------
-pytesseract.pytesseract.tesseract_cmd = r"C:\TESSERACT\tesseract.exe"
+# ----------------- IMPORTANT -----------------
+# Do NOT set a Windows path on Streamlit Cloud.
+# Tesseract will be installed automatically via packages.txt
+# pytesseract will find it automatically on Linux.
 
 # ----------------- Extract Text from PDF -----------------
 def extract_text_from_pdf(file_bytes):
